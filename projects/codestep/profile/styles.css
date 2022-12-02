@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/*
+こういうreset系の設定は normalize.css などを使うと便利です
+https://necolas.github.io/normalize.css/
+
+またもう少し複雑なレイアウトの場合 holy grail layout で検索すると
+良いサンプルが見つかります。
+https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -54,8 +63,18 @@ li {
   margin: 0 auto 100px auto;
   padding: 0 4%;
   text-align: center;
+  /*
+  中央に揃えたいときは text-align ではなく
+  flexbox を使って justify-content: center
+  を使うほうが意図したレイアウトになると思います。
+  */
 }
 
+/*
+最近のCSSでは基本的にデザインに関するものはすべて class で指定して、
+IDは JavaScript で動きを指定したいときや、 label の for などで
+どうしてもIDを使わざるをえないケース以外では使わなくなりました。
+*/
 #header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +82,12 @@ li {
   margin: 0 auto;
 }
 
+/*
+CSSの要素をどのように指定するかは長い歴史があるんですが、
+HTMLの構造は結構頻繁に変わるケースが有るという経験則により、
+「#header ul」のような指定をするよりは面倒でも毎回クラスを作る
+という方が無難という考えが最近は主流であるように思います。
+*/
 #header ul {
   display: flex;
   padding: 10px 0;
@@ -73,11 +98,11 @@ li {
 }
 
 #header li a {
-  color:rgb(57, 62, 68);
+  color: rgb(57, 62, 68);
 }
 
 #header li a:hover {
-  color: rgb(179, 180, 181)
+  color: rgb(179, 180, 181);
 }
 
 #mainvisual {
@@ -86,11 +111,18 @@ li {
 
 #mainvisual img {
   width: 100%;
-  max-width: 1920%;
+  max-width: 1920%; /* この % のあたいはちょっと大きすぎるので意味をなしてないかも... */
   height: 600px;
   object-fit: cover;
 }
 
+/* media query はファイルの最後にまとめて定義するほうが僕としては好みです。
+最近のフロントエンド開発では１つのCSSファイルだけを編集するということは
+ほぼなくなっているのであまり気にしなくても良いですが...
+CSSの変数を使って max-width: var(--width) みたいな書き方ができなかったはずなので、
+media query はまとめたほうがスマホのときの設定がわかりやすいというのが
+僕なりの意見です。
+*/
 @media screen and (max-width: 600px) {
   #mainvisual img {
     height: calc(100vh - 60px);
@@ -116,6 +148,7 @@ li {
 
 @media screen and (max-width: 600px) {
   #about .content {
+    /* この flexbox の使い方は応用範囲が広いので good です！ */
     flex-direction: column;
   }
   #about img {
