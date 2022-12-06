@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #24292E; 
+}
+
+li {
+  list-style: none;
+}
+
+/* header */
+
+#header {
+  height: 60px;
+  width: 100%;
+}
+
+#header h1 {
+  display: inline-block;
+  margin-left: 230px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#header img {
+  width: 120px;
+  height: 40px;
+  
+
+}
+#header ul {
+  display: inline-block;
+  float: right;
+  margin-right: 230px;
+  margin-top: 20px;
+}
+
+#header ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* mainvisual */
+
+#mainvisual {
+  height: 600px;
+  margin-bottom: 80px;
+}
+
+#mainvisual img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* section */
+
+.section {
+  text-align: center;
+}
+
+.sub-title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#about {
+  margin-bottom: 70px;
+}
+
+#profile {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+#text {
+  display: inline-block;
+}
+
+#text h3 {
+  text-align: left;
+}
+
+#bicycle {
+  margin-bottom: 60px;
+  margin-top: 100px;
+}
+
+.section ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 110px;
+}
+
+.section li {
+  margin: 0 8.1px;
+}
+
+li img {
+  width: 262.8px;
+  height: 174px;
+}
+
+.section li h3 {
+  text-align: center;
+}
+
+li p {
+  text-align: center;
+}
+
+/* footer */
+
+#footer p {
+  text-align: center;
+}
+
+/* SP */
+
+@media screen and (max-width: 600px) {
+  .section ul {
+    flex-direction: column;
+  }
+  
+}
