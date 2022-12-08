@@ -32,7 +32,7 @@ li {
   padding: 10px 0;
 }
 
-.site-title a {
+.site-title .logo {
   display: block;
 }
 
@@ -56,94 +56,93 @@ li {
   text-align: center;
 }
 
-#header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 
-#header ul {
+.header .nav {
   display: flex;
   padding: 10px 0;
 }
 
-#header li {
+.header .nav-list {
   margin-left: 30px;
 }
 
-#header li a {
+.header .nav-list .nav-anchor {
   color:rgb(57, 62, 68);
 }
 
-#header li a:hover {
+.header .nav-list .nav-anchor:hover {
   color: rgb(179, 180, 181)
 }
 
-#mainvisual {
+.mainvisual {
   margin-bottom: 80px;
 }
 
-#mainvisual img {
+.mainvisual .mainvisual-image {
   width: 100%;
-  max-width: 1920%;
   height: 600px;
   object-fit: cover;
 }
 
-@media screen and (max-width: 600px) {
-  #mainvisual img {
-    height: calc(100vh - 60px);
-  }
-}
-
-#about .content {
+.about .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#about img {
+.about .profile-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-right: 30px;
 }
 
-#about .text {
+.about .text {
   text-align: left;
 }
 
-@media screen and (max-width: 600px) {
-  #about .content {
-    flex-direction: column;
-  }
-  #about img {
-    margin-right: 0;
-  }
-}
-
-#bicycle ul {
+.bicycle .bicycle-list {
   display: flex;
   justify-content: space-between;
 }
 
-#bicycle li {
+.bicycle .bicycle-image {
   width: 32%;
 }
 
-@media screen and (max-width: 600px) {
-  #bicycle ul {
-    flex-direction: column;
-  }
-  #bicycle li {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
-#footer {
+.footer {
   font-size: 0.5rem;
   padding: 10px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .mainvisual .mainvisual-image {
+    height: calc(100vh - 60px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about .content {
+    flex-direction: column;
+  }
+  .about .profile-image {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bicycle .bicycle-list {
+    flex-direction: column;
+  }
+  .bicycle .bicycle-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
