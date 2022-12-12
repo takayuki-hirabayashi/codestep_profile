@@ -4,57 +4,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="プロフィールサイトです。私のお気に入りの自転車の画像を載せています。">
   <title>Profile</title>
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 </head>
 <body>
-  <header id="header">
-    <h1 class="main-title"><img src="img/logo.svg" alt=""></h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#bicycle">Bicycle</a></li>
-    </ul>
+  <header class="header">
+    <h1 class="main-title"><a class="main-anchor" href="#"><img class="logo" src="img/logo.svg" alt=""></a></h1>
+      <ul class="nav">
+        <li class="nav-list"><a href="#about">About</a></li>
+        <li class="nav-list"><a href="#bicycle">Bicycle</a></li>
+      </ul class="nav">
   </header>
   <main>
-    <div id="mainvisual">
-      <img src="img/mainvisual.jpg" alt="">
+    <div class="mainvisual">
+      <img class="mainvisual-image" src="img/mainvisual.jpg" alt="">
     </div>
   </main>
   <section class="section">
-    <h2 id="about" class="sub-title">About</h2>
-    <img src="img/about.jpg" alt="" id="profile">
-    <div id="text">
-      <h3>KAKERU MIYAICHI</h3>
-      <p>
-        テキストテキストテキストテキストテキストテキストテキスト<br>
-        テキストテキストテキストテキストテキストテキストテキスト<br>
-        テキストテキストテキストテキストテキストテキストテキスト
-      </p>
+    <h2 class="sub-title">About</h2>
+    <div class="profile">
+      <img class="profile-image" src="img/about.jpg" alt="" id="profile">
+      <div class="text">
+        <h3 class="name">KAKERU MIYAICHI</h3>
+        <p class="profile-text">
+          テキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキスト
+        </p>
+      </div>
     </div>
   </section>
   <section class="section">
-    <h2 id="bicycle" class="sub-title">Bicycle</h2>
-    <ul>
-      <li>
-        <img src="img/bicycle1.jpg" alt="">
-        <h3>タイトルタイトル</h3>
-        <p>テキストテキストテキスト</p>
+    <h2 class="sub-title">Bicycle</h2>
+    <ul class="bicycle-lists">
+      <li class="bicycle-list">
+        <img class="bicycle-image" src="img/bicycle1.jpg" alt="">
+        <h3 class="name">タイトルタイトル</h3>
+        <p class="bicycle-text">テキストテキストテキスト</p>
       </li>
-      <li>
-        <img src="img/bicycle2.jpg" alt="">
-        <h3>タイトルタイトル</h3>
-        <p>テキストテキストテキスト</p>
+      <li class="bicycle-list">
+        <img class="bicycle-image" src="img/bicycle2.jpg" alt="">
+        <h3 class="name">タイトルタイトル</h3>
+        <p class="bicycle-text">テキストテキストテキスト</p>
       </li>
-      <li>
-        <img src="img/bicycle3.jpg" alt="">
-        <h3>タイトルタイトル</h3>
-        <p>テキストテキストテキスト</p>
+      <li class="bicycle-list">
+        <img class="bicycle-image" src="img/bicycle3.jpg" alt="">
+        <h3 class="name">タイトルタイトル</h3>
+        <p class="bicycle-text">テキストテキストテキスト</p>
       </li>
     </ul>
   </section>
-  <footer id="footer">
-    <p>&copy; 2020 Profile</p>
+  <footer class="footer">
+    <p class="footer-paragraph">&copy; 2020 Profile</p>
   </footer>
 </body>
 </html>
