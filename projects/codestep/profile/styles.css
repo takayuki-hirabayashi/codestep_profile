@@ -127,18 +127,14 @@ li {
   .mainvisual .mainvisual-image {
     height: calc(100vh - 60px);
   }
-}
 
-@media screen and (max-width: 600px) {
   .about .content {
     flex-direction: column;
   }
   .about .profile-image {
     margin-right: 0;
   }
-}
 
-@media screen and (max-width: 600px) {
   .bicycle .bicycle-list {
     flex-direction: column;
   }
