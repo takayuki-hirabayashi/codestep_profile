@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+  --character-color: #2B2A27;
+}
+
 html {
   font-size: 100%;
 }
@@ -7,7 +11,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif; 
-  color: #2B2A27;
+  color: var(--character-color);
   width: 100%;
 }
 
@@ -16,7 +20,7 @@ ul {
 }
 
 a {
-  color: #2B2A27;
+  color: var(--character-color);
 
 }
 
@@ -69,7 +73,7 @@ a {
   display: inline-block;
   font-size: 0.875rem;
   padding: 18px 60px;
-  border: 1px solid #2B2A27;
+  border: 1px solid var(--character-color);
   text-decoration: none;
 }
 
