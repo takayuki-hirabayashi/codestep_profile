@@ -51,7 +51,7 @@ img {
 /* header */
 
 .header {
-  position: relative;
+  height: 1000px;
 }
 .mainvisual {
   height: auto;
