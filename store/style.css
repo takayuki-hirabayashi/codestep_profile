@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+:root {
+  --charcter-color: #2A2A2A;
+  --charcter-color2: #FFFFFF;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Arial"、"Hiragino Sans"、"Hiragino Kaku Gothic ProN"、"Meiryo"、sans-serif;
+  color: var(--charcter-color);
+}
+
+img {
+  width: 100%;
+}
+
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.section-paragraph {
+  font-size: 0.875rem;
+  margin-bottom: 40px;
+}
+
+.btn {
+  color:var(--charcter-color);
+  padding: 13px 36px;
+  border: 1px solid #2A2A2A;
+  text-decoration: none;
+}
+
+/* header */
+
+.header {
+  position: relative;
+  
+}
+.mainvisual {
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.logo {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* section1 */
+
+.section1 { /* これが反映されない・・・ */
+  max-width: 1200px;
+  padding: 0 5%;
+}
+
+.section1-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+  max-width: 1200px;
+  padding: 0 5%;
+  margin-bottom: 80px;
+
+}
+
+.section1-image {
+  position: relative;
+}
+
+.image-text { /*ここは無理矢理*/
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  color: var(--charcter-color2);
+  background-color: #70707080;
+  padding: 16px 33px;
+
+}
+
+/* section2 */
+
+.section2 {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.section2-content {
+  position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/* section3 */
+
+.section3 {  /*ここも無理矢理*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px 35px;
+  max-width: 1200px;
+  padding: 60px 5%;
+  background-color: #F5F5F5;
+}
+
+.block { /* ここも無理矢理 */
+  width: 45%;
+}
+
+/* footer */
+
+.footer {
+  color: var(--charcter-color2);
+  background-color: #333333;
+  width: 100%;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 1200px;
+  padding: 0 5%;
+  margin: 100px auto;
+}
+
+.logo2 {
+  width: 120px;
+  height: 40px;
+}
+
+.footer-contents .list-1 .ul-1 {
+  font-size: 0.75px;
+}
+
+.footer-contents .list-2 .ul-2 {
+  list-style: none;
+  font-size: 0.75px;
+}
+
+.footer-paragraph {
+  text-align: center;
+  color: var(--charcter-color);
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+/* SP */
+
+@media screen and (max-width: 896px) {
+  .section1-images {
+    flex-direction: column;
+  }
+
+  .section3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .block{
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .footer-contents { /* ロゴだけセンターにする方法がわかりませんでした */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+}
