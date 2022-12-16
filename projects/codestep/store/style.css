@@ -49,8 +49,9 @@ img {
   position: relative;
 }
 .mainvisual {
-  height: auto;
+  height: 80vh;
   margin-bottom: 80px;
+  object-fit: cover;
 }
 
 .logo {
