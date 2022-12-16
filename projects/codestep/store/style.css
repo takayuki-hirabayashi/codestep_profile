@@ -120,7 +120,7 @@ img {
 }
 
 .section3-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -207,15 +207,21 @@ img {
     flex-direction: column;
   }
 
-  .section3 {
+  .section3-card {
     flex-direction: column;
-    align-items: center;
-    gap: 0;
   }
 
-  .block {
+  .section3-card-reverse {
+    flex-direction: column;
+  }
+
+  .section3-card-image {
     width: 100%;
-    margin-top: 60px;
+  }
+
+  .section3-card-text {
+    width: 100%;
+    padding: 0 2rem;
   }
 
   .footer-contents {
