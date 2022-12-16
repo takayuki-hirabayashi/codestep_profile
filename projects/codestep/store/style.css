@@ -31,11 +31,6 @@ img {
   text-align: center;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
 .section-paragraph {
   font-size: 0.875rem;
   margin-bottom: 40px;
@@ -69,32 +64,37 @@ img {
 /* section1 */
 
 .section1 {
-  /* これが反映されない・・・ */
   max-width: 1200px;
-  padding: 0 5%;
+  margin: 5rem 0;
 }
 
-.section1-images {
+.section1-title {
+  font-size: 1.5rem;
+}
+
+.section1-image-cards {
   display: flex;
-  justify-content: space-between;
-  gap: 21px;
-  max-width: 1200px;
-  padding: 0 5%;
-  margin-bottom: 80px;
+  gap: 2rem;
 }
 
-.section1-image {
-  position: relative;
+.section1-image-card {
+  display: grid;
 }
 
-.image-text {
-  /*ここは無理矢理*/
-  position: absolute;
-  top: 38%;
-  left: 20%;
-  color: var(--charcter-color2);
-  background-color: #70707080;
-  padding: 16px 33px;
+.section1-image-card-image {
+  justify-self: stretch;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.section1-image-card-text {
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1rem;
 }
 
 /* section2 */
@@ -203,8 +203,9 @@ img {
 /* SP */
 
 @media screen and (max-width: 896px) {
-  .section1-images {
+  .section1-image-cards {
     flex-direction: column;
+    margin: 0 2rem;
   }
 
   .section3-card {
