@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 :root {
-  --charcter-color: #2A2A2A;
-  --charcter-color2: #FFFFFF;
+  --charcter-color: #2a2a2a;
+  --charcter-color2: #ffffff;
 }
 
 html {
@@ -10,14 +10,14 @@ html {
 }
 
 body {
-  font-family: "Arial"、"Hiragino Sans"、"Hiragino Kaku Gothic ProN"、"Meiryo"、sans-serif;
+  font-family: "Arial" 、 "Hiragino Sans" 、 "Hiragino Kaku Gothic ProN" 、
+    "Meiryo" 、sans-serif;
   color: var(--charcter-color);
 }
 
 img {
   width: 100%;
 }
-
 
 .body {
   display: flex;
@@ -31,20 +31,15 @@ img {
   text-align: center;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
 .section-paragraph {
   font-size: 0.875rem;
   margin-bottom: 40px;
 }
 
 .btn {
-  color:var(--charcter-color);
+  color: var(--charcter-color);
   padding: 13px 36px;
-  border: 1px solid #2A2A2A;
+  border: 1px solid #2a2a2a;
   text-decoration: none;
 }
 
@@ -52,11 +47,11 @@ img {
 
 .header {
   position: relative;
-  
 }
 .mainvisual {
-  height: auto;
+  height: 80vh;
   margin-bottom: 80px;
+  object-fit: cover;
 }
 
 .logo {
@@ -69,33 +64,38 @@ img {
 
 /* section1 */
 
-.section1 { /* これが反映されない・・・ */
+.section1 {
   max-width: 1200px;
-  padding: 0 5%;
+  margin: 5rem 0;
 }
 
-.section1-images {
+.section1-title {
+  font-size: 1.5rem;
+}
+
+.section1-image-cards {
   display: flex;
-  justify-content: space-between;
-  gap: 21px;
-  max-width: 1200px;
-  padding: 0 5%;
-  margin-bottom: 80px;
-
+  gap: 2rem;
 }
 
-.section1-image {
-  position: relative;
+.section1-image-card {
+  display: grid;
 }
 
-.image-text { /*ここは無理矢理*/
-  position: absolute;
-  top: 38%;
-  left: 20%;
-  color: var(--charcter-color2);
-  background-color: #70707080;
-  padding: 16px 33px;
+.section1-image-card-image {
+  justify-self: stretch;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
 
+.section1-image-card-text {
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1rem;
 }
 
 /* section2 */
@@ -107,28 +107,59 @@ img {
 
 .section2-content {
   position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
-
-
 
 /* section3 */
-
-.section3 {  /*ここも無理矢理*/
-  display: flex;
-  flex-wrap: wrap;
-  gap: 120px 35px;
-  max-width: 1200px;
-  padding: 60px 5%;
-  background-color: #F5F5F5;
+.section3 {
+  background-color: #f5f5f5;
+  width: 100%;
 }
 
-.block { /* ここも無理矢理 */
-  width: 45%;
+.section3-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section3-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.section3-card-reverse {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.section3-card-image {
+  width: 50%;
+  padding: 3rem;
+}
+
+.section3-card-text {
+  width: 50%;
+}
+
+.section3-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section3-card-description {
+  text-align: left;
+}
+
+.section3-card-description-sentence {
+  margin: 1rem 0;
 }
 
 /* footer */
@@ -165,7 +196,7 @@ img {
 .footer-paragraph {
   text-align: center;
   color: var(--charcter-color);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding-top: 30px;
   padding-bottom: 25px;
 }
@@ -173,25 +204,32 @@ img {
 /* SP */
 
 @media screen and (max-width: 896px) {
-  .section1-images {
+  .section1-image-cards {
+    flex-direction: column;
+    margin: 0 2rem;
+  }
+
+  .section3-card {
     flex-direction: column;
   }
 
-  .section3 {
+  .section3-card-reverse {
     flex-direction: column;
-    align-items: center;
-    gap: 0;
   }
 
-  .block{
+  .section3-card-image {
     width: 100%;
-    margin-top: 60px;
   }
 
-  .footer-contents { /* ロゴだけセンターにする方法がわかりませんでした */
+  .section3-card-text {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .footer-contents {
+    /* ロゴだけセンターにする方法がわかりませんでした */
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
-
 }
