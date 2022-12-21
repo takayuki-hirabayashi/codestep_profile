@@ -24,16 +24,21 @@ a {
 
 hr {
   width: 40px;
-  margin: 36px 0 60px 0;
+  margin: 36px 0 50px 0;
 }
 
 .content-title {
   font-size: 2.25rem;
+  letter-spacing: 10.8px;
 }
 
 .content-subtitle {
   font-size: 0.875rem;
   margin-top: 10px;
+}
+
+.content-text {
+  font-size: 0.875rem;
 }
 
 /* header */
@@ -95,6 +100,7 @@ hr {
 
 .news-contener {
   width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -106,6 +112,7 @@ hr {
 .news-contents {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .news-contents .news-content:nth-child(2),
@@ -134,9 +141,94 @@ hr {
   padding: 1px 7px;
 }
 
+/* about-contener */
+
+.about-contener {
+  display: flex;
+  margin-top: 128px;
+}
+
+.about-image {
+  height: 400px;
+  width: 58vw;
+  object-fit: cover;
+}
+
+.about-text {
+  padding: 0 16px;
+  margin: 180px 0 0 54px;
+}
+
+/* business-contener */
+
+.business-contener {
+  padding: 0 16px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.business-title {
+  margin-top: 120px;
+}
+
+.business-content {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.business-content-left {
+  margin-top: 100px;
+}
+
+.business-content-header {
+  font-size: 0.875rem;
+  margin-top: 50px;
+}
+
+.business-content-image {
+  height: 232px;
+}
+
+/* company-contener */
+
+.company-contener {
+  padding: 0 16px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.company-content {
+  background-color: var(--charcter-color2);
+  height: 640px;
+  width: 50%;
+  margin-top: 120px;
+  padding: 100px 0 0 62px;
+}
+
+.company-description-list {
+  font-size: 0.875rem;
+  padding-left: 6em;
+}
+
+.company-description-term {
+  float: left;
+  margin-left: -6em;
+}
+
+.company-image {
+  height: 400px;
+  width: 50%;
+  object-fit: cover;
+}
+
 /* SP */
 
 @media screen and (max-width: 900px) {
+  hr {
+    margin: 24px 0 34px 0;
+  }
+
   /* header */
 
   .header {
@@ -158,6 +250,10 @@ hr {
 
   /* news-contener */
 
+  .news-title {
+    margin-top: 80px;
+  }
+
   .news-contents {
     flex-direction: column;
   }
@@ -173,5 +269,43 @@ hr {
 
   .news-content + .news-content {
     border: none;
+  }
+
+  /* about-contener */
+
+  .about-contener {
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    margin: 30px 0 0 0;
+  }
+
+  /* business-contener */
+
+  .business-title {
+    margin-top: 80px;
+  }
+
+  .business-content {
+    flex-direction: column;
+  }
+
+  .business-content-left {
+    margin-top: 4px;
+  }
+
+  .business-content-header {
+    margin-top: 0;
+  }
+
+  .business-content-image {
+    object-fit: cover;
+    margin-bottom: 30px;
   }
 }
