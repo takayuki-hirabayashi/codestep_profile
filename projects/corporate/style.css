@@ -164,6 +164,7 @@ hr {
 .business-contener {
   padding: 0 16px;
   width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -193,33 +194,68 @@ hr {
 /* company-contener */
 
 .company-contener {
-  padding: 0 16px;
+  padding: 0 16px 110px 16px;
   width: 1000px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 120px auto 0 auto;
+  display: grid;
 }
 
 .company-content {
   background-color: var(--charcter-color2);
   height: 640px;
   width: 50%;
-  margin-top: 120px;
-  padding: 100px 0 0 62px;
+  padding: 100px 0 0 48px;
+  grid-column-start: 1;
+  grid-row-start: 1;
 }
 
 .company-description-list {
   font-size: 0.875rem;
-  padding-left: 6em;
+  padding-left: 5em;
 }
 
 .company-description-term {
   float: left;
-  margin-left: -6em;
+  margin-left: -5em;
 }
 
 .company-image {
   height: 400px;
-  width: 50%;
+  width: 54%;
   object-fit: cover;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  justify-self: right;
+  align-self: center;
+}
+
+/* footer */
+
+.footer {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.footer-content-logo {
+  width: 100px;
+}
+
+.footer-content-text {
+  font-size: 0.875rem;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  margin: 26px 0 20px 0;
 }
 
 /* SP */
@@ -307,5 +343,52 @@ hr {
   .business-content-image {
     object-fit: cover;
     margin-bottom: 30px;
+  }
+
+  /* company-contener */
+
+  .company-contener {
+    display: block;
+    margin-top: 50px;
+    padding: 0 16px;
+  }
+
+  .company-content {
+    width: 100%;
+    padding: 40px 0 40px 20px;
+    height: auto;
+  }
+
+  .company-description-list {
+    padding-left: 0;
+  }
+
+  .company-description-term {
+    float: none;
+    margin: 20px 0 0 0;
+  }
+
+  .company-description-definition {
+    padding-left: 1rem;
+    margin-top: 5px;
+  }
+
+  .company-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* footer */
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content-texts {
+    margin-top: 10px;
+  }
+
+  .footer-copyright {
+    margin: 40px 0 20px 0;
   }
 }
