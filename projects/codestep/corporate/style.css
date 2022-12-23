@@ -117,16 +117,12 @@ hr {
   margin-top: 10px;
 }
 
-.news-contents .news-content:nth-child(2),
-.news-contents .news-content:nth-child(3) {
-  padding-left: 20px;
-}
-
 .news-content + .news-content {
+  padding-left: 20px;
   border-left: 1px solid var(--charcter-color1);
 }
 .news-content-history {
-  display: flex;
+  display: inline-block;
   vertical-align: middle;
   margin-bottom: 16px;
 }
