@@ -170,14 +170,29 @@ hr {
   margin-top: 120px;
 }
 
-.business-content {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
+.business-contents {
+  width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "left-top right-top"
+    "left-bottom right-bottom";
+  column-gap: 5%;
 }
 
-.business-content-left {
+.right-top {
+  grid-area: right-top;
+}
+.left-top {
+  grid-area: left-top;
   margin-top: 100px;
+}
+.right-bottom {
+  grid-area: right-bottom;
+  margin-top: -100px;
+}
+.left-bottom {
+  grid-area: left-bottom;
 }
 
 .business-content-header {
@@ -326,12 +341,19 @@ hr {
     margin-top: 80px;
   }
 
-  .business-content {
-    flex-direction: column;
+  .business-contents {
+    grid-template-areas:
+      "right-top"
+      "left-top"
+      "right-bottom"
+      "left-bottom";
   }
 
-  .business-content-left {
-    margin-top: 4px;
+  .left-top {
+    margin-top: 0;
+  }
+  .right-bottom {
+    margin-top: 0;
   }
 
   .business-content-header {
